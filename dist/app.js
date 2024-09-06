@@ -4,7 +4,6 @@
 	class AbstractView {
 		constructor() {
 			this.app = document.getElementById('root');
-	        console.log("this.app", this.app);
 		}
 
 		setTitle(title) {
@@ -28,10 +27,9 @@
 
 	    render() {
 	        const main = document.createElement("div");
-	        console.log("MAIN", main);
 	        main.innerHTML = "Test";
-	        // this.app.innerHTML = "";
-	        // this.app.append(main);
+	        this.app.innerHTML = "";
+	        this.app.append(main);
 	    }
 	}
 
@@ -43,7 +41,6 @@
 	    constructor() {
 	        window.addEventListener("hashchange", this.route.bind(this));
 	        this.route();
-	        // console.log(window.document)
 	    }
 
 	    route() {
@@ -53,9 +50,7 @@
 	        const view = this.routes.find(r => r.path == location.hash).view;
 	        this.currentView = new view();
 	        this.currentView.render();
-	        console.log("this.currentView", this.currentView);
 	    }
-
 	}
 
 	new App();

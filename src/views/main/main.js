@@ -8,9 +8,8 @@ export class MainView extends AbstractView {
 
     render() {
         const main = document.createElement("div");
-        console.log("MAIN", main)
         main.innerHTML = "Test";
-        // this.app.innerHTML = "";
-        // this.app.append(main);
+        this.app.innerHTML = "";
+        this.app.append(main);
     }
 }

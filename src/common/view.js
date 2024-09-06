@@ -1,7 +1,6 @@
 export class AbstractView {
 	constructor() {
 		this.app = document.getElementById('root');
-        console.log("this.app", this.app)
 	}
 
 	setTitle(title) {
